@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bohdan Kaira — Portfolio</title>
+  <link rel="stylesheet" href="dist/style.css" />
+</head>
+<body class="bg-white text-black font-sans scroll-smooth transition-colors duration-300 dark:bg-black dark:text-white" class="bg-white text-black font-sans scroll-smooth" class="bg-white text-black font-sans">
+
+  <!-- Header -->
+  <header class="fixed top-0 left-0 w-full bg-white dark:bg-black z-50 shadow-sm">
+    <div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+      <div class="text-lg font-semibold tracking-tight">
+        Bohdan Kaira<sup class="text-xs">©</sup>
+      </div>
+  
+      <nav class="hidden md:flex gap-6 items-center text-sm font-medium">
+        <a href="#home" class="nav-link px-3 py-2 rounded-full transition hover:bg-gray-100 dark:hover:bg-gray-800">Home</a>
+        <a href="#projects" class="nav-link px-3 py-2 rounded-full transition hover:bg-gray-100 dark:hover:bg-gray-800">Projects</a>
+        <a href="#about" class="nav-link px-3 py-2 rounded-full transition hover:bg-gray-100 dark:hover:bg-gray-800">About</a>
+        <a href="#contact" class="nav-link px-3 py-2 rounded-full transition hover:bg-gray-100 dark:hover:bg-gray-800">Contact</a>
+      </nav>
+  
+      <div class="flex items-center gap-4">
+        <button id="themeToggle"
+          class="w-10 h-10 flex items-center justify-center rounded-full bg-black text-white dark:bg-white dark:text-black shadow-lg transition-all duration-300 border border-gray-300 hover:scale-105">
+          <span id="themeIcon" class="text-lg transition-transform duration-300">☽</span>
+        </button>
+        <button id="menuToggle" class="md:hidden text-2xl focus:outline-none">☰</button>
+      </div>
+    </div>
+  </header>
+  
+  <!-- Fullscreen slide-down mobile menu under header -->
+  <div id="mobileMenu"
+    class="fixed top-[64px] left-0 w-full h-[calc(100vh-64px)] bg-white dark:bg-black z-40 translate-y-[-100%] transition-transform duration-300 ease-in-out flex flex-col items-center justify-center space-y-6 text-lg font-medium md:hidden">
+    <a href="#home" class="nav-link" onclick="closeMenu()">Home</a>
+    <a href="#projects" class="nav-link" onclick="closeMenu()">Projects</a>
+    <a href="#about" class="nav-link" onclick="closeMenu()">About</a>
+    <a href="#contact" class="nav-link" onclick="closeMenu()">Contact</a>
+  </div>
+  
+  <!-- Hero Section -->
+  <section id="about"
+    class="transition-opacity duration-700 opacity-0 animate-fadeIn flex flex-col md:flex-row justify-between items-start px-6 py-20 max-w-7xl mx-auto">
+    <div class="max-w-xl">
+      <h1 class="text-6xl md:text-8xl font-extrabold leading-tight animate-fadeIn">Frontend<br>Developer</h1>
+      <p class="mt-6 text-lg text-gray-600">Hi, I'm Bohdan Kaira — Junior Frontend Developer skilled in creating responsive, user-friendly web interfaces using HTML, CSS, and JavaScript. Experienced in integrating APIs, optimizing performance, and collaborating in Agile workflows. Passionate about modern frontend technologies and delivering exceptional user experiences.</p>
+    </div>
+    <div class="mt-10 md:mt-0">
+      <p class="text-sm text-gray-500">Let’s Work Together</p>
+      <a href="mailto:bogdankaira0404@gmail.com" target="_blank" class="text-lg font-medium text-black dark:text-white">bogdankaira0404@gmail.com</a>
+    </div>
+  </section>
+  
+  <!-- Projects -->
+  <section id="projects" class="transition-opacity duration-700 opacity-0 animate-fadeIn px-6 py-20 max-w-7xl mx-auto">
+    <h2 class="text-3xl font-bold mb-10 text-center">Projects</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-12">
+      
+      <!-- Agronix -->
+      <div>
+        <a href="https://agronix.com.ua" target="_blank">
+          <div class="group relative w-full h-[280px] rounded-xl overflow-hidden mb-4">
+            
+            <div
+              class="absolute inset-0 bg-black text-white flex items-center justify-center transition-transform duration-500 group-hover:-translate-y-full z-10 dark:bg-gray-800">
+              <img src="./assets/images/agronix_logo.svg" alt="Agronix Logo" class="max-h-12">
+            </div>
+          
+            
+            <img src="./assets/images/agronix_preview.webp" alt="Agronix Preview"
+              class="absolute inset-0 object-cover w-full h-full transition-transform duration-500 translate-y-full group-hover:translate-y-0 z-0">
+          </div>
+        </a>
+        <p class="font-semibold mb-2">Agronix</p>
+        <ul class="space-y-2 pl-5 list-disc text-sm text-gray-600">
+          <li>Responsive UI with JS filters (MixItUp), multilingual content, and calculator integration.</li>
+          <li>Built reusable components with CSS Grid, Flexbox, and native JS for dynamic interaction.</li>
+          <li>Integrated REST API messaging to enhance form performance and speed.</li>
+        </ul>
+      </div>
+  
+      <!-- Harmony Hospitality -->
+      <div>
+        <a href="https://harmonyhospitality.gr" target="_blank">
+          <div class="group relative w-full h-[280px] rounded-xl overflow-hidden mb-4">
+            <div
+              class="absolute inset-0 bg-black text-white flex items-center justify-center transition-transform duration-500 group-hover:-translate-y-full z-10 dark:bg-gray-800">
+              <img src="./assets/images/harmony_logo.svg" alt="Harmony Hospitality Logo">
+            </div>
+            <img src="./assets/images/harmony_preview.webp" alt="Agronix Preview"
+              class="absolute inset-0 object-cover w-full h-full transition-transform duration-500 translate-y-full group-hover:translate-y-0 z-0">
+          </div>
+        </a>
+        <p class="font-semibold mb-2">Harmony Hospitality</p>
+        <ul class="space-y-2 pl-5 list-disc text-sm text-gray-600">
+          <li>Adaptive layout from scratch with clean HTML/CSS and JS animations.</li>
+          <li>Implemented service filtering, booking logic, and multilingual setup via WP.</li>
+          <li>Optimized page speed with lazy loading and image compression.</li>
+        </ul>
+      </div>
+  
+      <!-- Volyntorf -->
+      <div>
+        <a href="https://volyntorf.com" target="_blank">
+          <div class="group relative w-full h-[280px] rounded-xl overflow-hidden mb-4">
+            <div
+              class="absolute inset-0 bg-black text-white flex items-center justify-center transition-transform duration-500 group-hover:-translate-y-full z-10 dark:bg-gray-800">
+              <img src="./assets/images/torf_logo.svg" alt="Volyntorf Logo">
+            </div>
+            <img src="./assets/images/torf_preview.webp" alt="Agronix Preview"
+              class="absolute inset-0 object-cover w-full h-full transition-transform duration-500 translate-y-full group-hover:translate-y-0 z-0">
+          </div>
+        </a>
+        <p class="font-semibold mb-2">Volyntorf</p>
+        <ul class="space-y-2 pl-5 list-disc text-sm text-gray-600">
+          <li>Created dynamic frontend: animations, modals, sliders on vanilla JS.</li>
+          <li>Structured responsive layout with CSS Grid & Flexbox.</li>
+          <li>Improved loading speed via lazy loading and asset optimization.</li>
+        </ul>
+      </div>
+  
+      <!-- INTER Agroholding -->
+      <div>
+        <a href="https://inter.in.ua" target="_blank">
+          <div class="group relative w-full h-[280px] rounded-xl overflow-hidden mb-4">
+            <div
+              class="absolute inset-0 bg-black text-white flex items-center justify-center transition-transform duration-500 group-hover:-translate-y-full z-10 dark:bg-gray-800">
+              <img src="./assets/images/inter_logo.svg" alt="Inter Logo">
+            </div>
+            <img src="./assets/images/inter_preview.webp" alt="Agronix Preview"
+              class="absolute inset-0 object-cover w-full h-full transition-transform duration-500 translate-y-full group-hover:translate-y-0 z-0">
+          </div>
+        </a>
+        <p class="font-semibold mb-2">INTER Agroholding</p>
+        <ul class="space-y-2 pl-5 list-disc text-sm text-gray-600">
+          <li>Custom frontend with JS-driven filters and collapsible blocks.</li>
+          <li>Flexible content zones powered by CFS in WordPress backend.</li>
+          <li>Focused on clean markup, scalability, and admin control.</li>
+        </ul>
+      </div>
+  
+    </div>
+  </section>
+  
+  <!-- Expertise -->
+  <section class="transition-opacity duration-700 opacity-0 animate-fadeIn px-6 py-20 max-w-7xl mx-auto ">
+    <h2 class="text-3xl font-bold mb-4">Expertise</h2>
+    <p class="text-gray-600 text-base mb-12 max-w-2xl">
+      I develop scalable, maintainable frontend solutions and custom WordPress themes. My toolkit spans modern JavaScript, performance techniques, and client-oriented workflows.
+    </p>
+  
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 text-sm text-gray-800 text-left dark:text-gray-500">
+      <div>
+        <p class="font-semibold text-base mb-2">Frontend</p>
+        <p>HTML5, CSS3 (BEM, Flexbox, Grid), JavaScript (ES6+), jQuery, Fetch API, React, Vite, responsive design</p>
+      </div>
+      <div>
+        <p class="font-semibold text-base mb-2">Build & Design Tools</p>
+        <p>Git, Webpack, Gulp, npm, Figma, browser DevTools</p>
+      </div>
+      <div>
+        <p class="font-semibold text-base mb-2">CMS & E-commerce Solutions</p>
+        <p>WordPress (custom themes, ACF, CFS), WooCommerce (custom layouts)</p>
+      </div>
+      <div>
+        <p class="font-semibold text-base mb-2">Web Performance</p>
+        <p>Lazy loading, asset minification, code splitting, cross-browser testing</p>
+      </div>
+      <div>
+        <p class="font-semibold text-base mb-2">AI Integration Tools</p>
+        <p>ChatGPT, Midjourney, GitHub Copilot — applied in content creation, prototyping, and code acceleration</p>
+      </div>
+      <div>
+        <p class="font-semibold text-base mb-2">Process & Communication</p>
+        <p>REST API integration, Agile workflows, project coordination, client-first communication</p>
+      </div>
+    </div>
+  </section>
+  
+  
+  
+  
+  
+  <!-- Contact -->
+  <section id="contact" class="transition-opacity duration-700 opacity-0 animate-fadeIn px-6 py-20 max-w-7xl mx-auto text-center">
+    <h2 class="text-5xl font-extrabold mb-8">Let’s talk!</h2>
+    <a href="mailto:bogdankaira0404@gmail.com" target="_blank"
+      class="inline-block bg-black text-white px-6 py-3 rounded-full text-lg font-medium">bogdankaira0404@gmail.com ↗</a>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="px-6 py-8 text-sm text-gray-500 flex flex-col sm:flex-row sm:justify-between items-center gap-4 max-w-7xl mx-auto text-center">
+    <div>2025 © — Made by Bohdan Kaira</div>
+    <div class="flex gap-4">
+      <a href="https://linkedin.com/in/bohdan-kaira" target="_blank">LinkedIn</a>
+      <a href="https://t.me/BohdanKaira" target="_blank">Telegram</a>
+      <a href="https://wa.me/6973598003" target="_blank">WhatsApp</a>
+    </div>
+  </footer>
+  
+
+  <script src="js/main.js"></script>
+
+
+</body>
+</html>
