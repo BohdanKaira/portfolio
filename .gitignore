@@ -1,0 +1,21 @@
+# node/npm
+node_modules/
+package-lock.json
+
+# сборка
+dist/
+
+# системные файлы
+.DS_Store
+
+# git
+.git/
+
+# IDE / редакторы
+.vscode/
+.idea/
+
+# кэш и логи
+*.log
+*.tmp
+*.cache
